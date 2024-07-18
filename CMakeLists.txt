@@ -30,12 +30,6 @@ add_library(
     ${SRC}
 )
 
-target_compile_definitions(
-    console_colors
-
-    PRIVATE CONSOLE_COLORS_DEBUG
-)
-
 if (WIN32)
     if ("${CMAKE_SIZEOF_VOID_P}" STREQUAL "8")
         set(CONSOLE_COLORS_SUFFIX "win64")
